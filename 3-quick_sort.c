@@ -51,6 +51,9 @@ void quick(int *array, int l, int h, size_t size)
 {
 	size_t p;
 
+	if (array == NULL)
+		return;
+
 	if (l < h)
 	{
 		p = partition(array, l, h, size);
