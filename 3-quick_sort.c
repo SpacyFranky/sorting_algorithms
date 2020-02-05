@@ -19,7 +19,7 @@ size_t partition(int *array, int l, int h, size_t size)
 	{
 		if (pivot > array[j])
 		{
-			if (i != j)
+			if (array[i] != array[j])
 			{
 				x = array[i];
 				array[i] = array[j];
@@ -29,7 +29,7 @@ size_t partition(int *array, int l, int h, size_t size)
 			i++;
 		}
 	}
-	if (i != h)
+	if (array[i] != array[h])
 	{
 		y = array[i];
 		array[i] = array[h];
