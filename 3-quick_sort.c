@@ -29,10 +29,13 @@ size_t partition(int *array, int l, int h, size_t size)
 			i++;
 		}
 	}
-	y = array[i];
-	array[i] = array[h];
-	array[h] = y;
-	print_array(array, size);
+	if (i != h)
+	{
+		y = array[i];
+		array[i] = array[h];
+		array[h] = y;
+		print_array(array, size);
+	}
 	return (i);
 }
 
