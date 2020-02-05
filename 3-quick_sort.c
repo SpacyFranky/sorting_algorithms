@@ -15,7 +15,7 @@ size_t partition(int *array, int l, int h, size_t size)
 
 	pivot = array[h];
 	i = l;
-	for (j = l; j <= h; j++)
+	for (j = l; j < h; j++)
 	{
 		if (pivot > array[j])
 		{
