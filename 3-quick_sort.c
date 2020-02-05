@@ -49,7 +49,7 @@ size_t partition(int *array, int l, int h, size_t size)
  */
 void quick(int *array, int l, int h, size_t size)
 {
-	size_t p;
+	int p;
 
 	if (l < h)
 	{
