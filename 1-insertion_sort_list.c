@@ -23,15 +23,13 @@ void insertion_sort_list(listint_t **list)
 			tmp->next = tmp->next->next;
 			prevtmp = tmp->prev;
 			/* next node in prev node */
-			tmp->prev = tmp->next;
+			tmp->prev = nexttmp;
 			nexttmp->next = tmp;
 			nexttmp->prev = prevtmp;
-			if (prevtmp != NULL)
-				prevtmp->next = nexttmp;
+			prevtmp->next = nexttmp;
 			tmp = head;
 			print_list(tmp);
 		}
 		tmp = tmp->next;
 	}
-	tmp = head;
 }
