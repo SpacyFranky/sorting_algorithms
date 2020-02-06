@@ -11,6 +11,9 @@ void insertion_sort_list(listint_t **list)
 
 	head = *list;
 	tmp = *list;
+
+	if (list == NULL || *list == NULL)
+		return;
 	while (tmp)
 	{
 		if (tmp->prev && tmp->prev == head && tmp->prev->n > tmp->n)
